@@ -30,19 +30,14 @@ namespace Employee_Leave_Management.Repository
 
         public ICollection<LeaveAllocation> FindAll()
         {
-            var LeaveAllocations = _db.LeaveAllocations.ToList();
-            return LeaveAllocations;
+            var leaveAllocations = _db.LeaveAllocations.ToList();
+            return leaveAllocations;
         }
 
         public LeaveAllocation FindById(int id)
         {
-            var LeaveAllocation = _db.LeaveAllocations.Find(id);
-            return LeaveAllocation;
-        }
-
-        public ICollection<LeaveAllocation> GetEmployeesByLeaveAllocation(int id)
-        {
-            throw new NotImplementedException();
+            var leaveAllocation = _db.LeaveAllocations.Find(id);
+            return leaveAllocation;
         }
 
         public bool Save()

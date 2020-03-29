@@ -30,14 +30,14 @@ namespace Employee_Leave_Management.Repository
 
         public ICollection<LeaveHistory> FindAll()
         {
-            var LeaveHistorys = _db.LeaveHistories.ToList();
-            return LeaveHistorys;
+            var leaveHistorys = _db.LeaveHistories.ToList();
+            return leaveHistorys;
         }
 
         public LeaveHistory FindById(int id)
         {
-            var LeaveHistory = _db.LeaveHistories.Find(id);
-            return LeaveHistory;
+            var leaveHistory = _db.LeaveHistories.Find(id);
+            return leaveHistory;
         }
 
         public bool Save()

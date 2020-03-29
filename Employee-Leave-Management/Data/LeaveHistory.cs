@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Employee_Leave_Management.Models
+namespace Employee_Leave_Management.Data
 {
     public class LeaveHistory
     {

@@ -18,32 +18,37 @@ namespace Employee_Leave_Management.Repository
         }
         public bool Create(LeaveHistory entity)
         {
-            throw new NotImplementedException();
+            _db.LeaveHistories.Add(entity);
+            return Save();
         }
 
         public bool Delete(LeaveHistory entity)
         {
-            throw new NotImplementedException();
+            _db.LeaveHistories.Remove(entity);
+            return Save();
         }
 
         public ICollection<LeaveHistory> FindAll()
         {
-            throw new NotImplementedException();
+            var LeaveHistorys = _db.LeaveHistories.ToList();
+            return LeaveHistorys;
         }
 
         public LeaveHistory FindById(int id)
         {
-            throw new NotImplementedException();
+            var LeaveHistory = _db.LeaveHistories.Find(id);
+            return LeaveHistory;
         }
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            return _db.SaveChanges() > 0;
         }
 
         public bool Update(LeaveHistory entity)
         {
-            throw new NotImplementedException();
+            _db.LeaveHistories.Update(entity);
+            return Save();
         }
     }
 }
